@@ -1,0 +1,418 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height:100vh;
+  font-family: 'Inter', sans-serif;
+  font-size:1.25rem;
+  line-height:1.5;
+  padding:0;
+  margin:0;
+}
+
+.cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #002638;
+  padding: 2.5rem;
+  transition: all .4s;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  @media screen and (min-width: 40em){
+      place-items:center; }
+
+  	img {
+  		grid-column:1;
+  		grid-row:1;
+
+  	@media screen and (min-width: 40em) {
+      height:200%;
+      padding-top:5rem;
+      }
+  	}
+
+  	p {
+  		grid-column:1;
+  		grid-row:2;
+  		text-align:center;
+  		color:#F4EADB;
+  		font-size:1.15rem;
+  		padding:.8rem;
+  		place-self:end;
+
+  		  @media screen and (min-width: 40em) {
+      font-size:1.25rem;
+      height:auto;
+      justify-self:center;
+      }
+  	}
+
+  	button {
+  		grid-column:1;
+  		grid-row:3;
+
+    	font-size:.9rem;
+    	border:none;
+    	border-radius:10px;
+    	padding: 1rem;
+    	align-self: end;
+    	justify-self: center;
+    	background-color: #6BAEA9;
+    	color: #002638;
+
+    	@media screen and (min-width: 40em) {
+      	   align-self:center; }
+  		}
+
+}
+
+
+
+main{
+	height: 100%;
+}
+
+p {
+	padding:0;
+	margin-block-start: 0;
+	margin-block-end: 0;
+	color:#F4EADB;
+}
+
+.content {
+	background-color:#002638;
+}
+
+.top {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 2fr 1fr 2fr;
+  color:#F4EADB;
+
+  @media screen and (min-width: 40em) {
+      	   height:100%;
+  		}
+
+  .top .hours .icon img {
+  	height:auto;
+  	display:grid;
+  	color:#fff;
+  	justify-self:center;
+
+  		
+  }
+
+  	.moon {
+  		place-self: center;
+  		display:grid;
+		grid-column:1;
+		grid-row:1;
+		width:80%;
+		padding-top:1rem;
+
+		img {
+			@media screen and (min-width: 40em) {
+      	   width:45%;
+      	   justify-self:center;
+      	   padding-top:2rem;
+  		}
+		}
+
+		
+	}
+
+	.current{
+		height:auto;
+		grid-column:1;
+		grid-row:2;
+
+		.now p {
+			padding:0;
+		}
+	}
+
+	.extra{
+		display:grid;
+		grid-column:1;
+		grid-row:3;
+
+		grid-template-columns:1fr;
+		grid-template-rows:1fr;
+
+		@media screen and (min-width: 40em) {
+      	   padding:0rem 15rem;
+  		}
+
+		h1{
+			font-size: .75rem;
+			font-weight:500;
+			text-transform: uppercase;
+			letter-spacing:.05rem;
+			padding:0;
+			margin:0 0 .25rem 0;
+		}
+
+
+		.left {
+			grid-column:1;
+			grid-row:1;
+			justify-items:start;
+			padding-left:2rem;
+
+			p{
+				font-size:1.5rem;
+			}
+		}
+
+		.right {
+			grid-column:2;
+			grid-row:1;
+			text-align:right;
+			justify-items:end;
+			justify-self:end;
+			padding-right:2rem;
+
+			p{
+				font-size:1.5rem;
+			}
+		}
+	}
+
+	.hours{
+		display:grid;
+		grid-column:1;
+		grid-row:4;
+
+		grid-template-rows:1;
+		grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+
+		justify-items:center;
+
+		border-top: 5px solid #6BAEA9;
+		border-bottom: 2px solid #6BAEA9;
+
+		padding: 1.5rem 1.25rem;
+		text-align:center;
+
+		color:#F4EADB;
+
+		@media screen and (min-width: 40em) {
+      	   padding:0rem 12rem;
+  		}
+
+
+
+
+		.hour{
+			font-size:.75rem;
+			font-weight:700;
+			letter-spacing:.05rem;
+			place-items:center;
+		}
+
+		.icon img {
+			margin:0;
+			width:40%;
+			place-items:center;
+			align-self:center;
+
+			@media screen and (min-width: 40em) {
+      	   		width:20%;
+  			}
+		}
+
+		.icon p img{
+			justify-self:center;
+		}
+
+		.hour1{
+			display:grid;
+			grid-column:1;
+			grid-row:1;
+			place-items:center;
+		}
+
+		.hour2{
+			display:grid;
+			grid-column:2;
+			grid-row:1;
+			place-items:center;
+		}
+
+		.hour3{
+			display:grid;
+			grid-column:3;
+			grid-row:1;
+			place-items:center;
+		}
+
+		.hour4{
+			display:grid;
+			grid-column:4;
+			grid-row:1;
+			place-items:center;
+		}
+
+		.hour5{
+			display:grid;
+			grid-column:5;
+			grid-row:1;
+			place-items:center;
+		}
+	}
+}
+
+.current {
+	padding-bottom: 1rem;
+
+	@media screen and (min-width: 40em) {
+	padding-bottom: 0rem;
+	place-items:center;
+	place-self:center;
+  		}
+}
+
+.current .now {
+	font-size:4.5rem;
+	text-align:center;
+	line-height:1.2;
+}
+
+.current .location {
+	font-size:1.15rem;
+	text-align:center;
+	text-transform:uppercase;
+	letter-spacing:.1rem;
+	font-weight:500;
+}
+
+.current .description {
+	font-size:.9rem;
+	text-align:center;
+	letter-spacing:.05rem;
+	font-weight:300;
+	text-transform:capitalize;
+}
+
+.bottom {
+	height:100%;
+}
+
+.message {
+	border-bottom: 2px solid #6BAEA9;
+	color:#F4EADB;
+
+		@media screen and (min-width: 40em) {
+
+			padding-left:10rem;
+			padding-right:10rem;
+  		}
+
+	
+}
+.message h1 {
+	color: #fff;
+	font-size:1rem;
+	text-align:center;
+	text-transform:uppercase;
+	letter-spacing:.1rem;
+	font-weight:400;
+	padding-bottom:0;
+	padding-top:1.5rem;
+	margin:0;
+		color:#F4EADB;
+
+		@media screen and (min-width: 40em) {
+		font-size:1.5rem;
+  		}
+
+}
+
+.message .advice {
+	font-size:.9rem;
+	color: #fff;
+	font-weight: 300;
+	text-align:center;
+	padding: .5rem 2rem 1.5rem;
+	color:#F4EADB;
+
+	@media screen and (min-width: 40em) {
+		font-size:1.1rem;
+  		}
+
+}
+
+.message .description{
+	font-size:.9rem;
+	text-align:center;
+	letter-spacing:.05rem;
+	font-weight:300;
+	text-transform:capitalize;
+	color:#F4EADB;
+
+	@media screen and (min-width: 40em) {
+		font-size:1.25rem;
+  		}
+}
+
+.next {
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6,1fr);
+  padding-top:2rem;
+  padding-bottom:2rem;
+  @media screen and (min-width: 40em) {
+		padding: 2rem 10rem;
+  		}
+
+
+  	.day{
+  		font-size:1rem;
+  	}
+
+  	.row {
+  		display: grid;
+  		grid-template-columns: repeat(4,1fr);
+  		grid-template-rows: 1fr;
+  		place-items:center;
+  		color:#fff;
+  		padding:.5rem;
+	}
+
+	.high{
+		font-size:1rem;
+	}
+
+	.low{
+		font-size:1rem;
+	}
+
+	.icon {
+		width:20%;
+			@media screen and (min-width: 40em) {
+				width:10%;
+  		}
+
+	}
+}
+
+
+
+
+.open {
+  transform: translateY(-200%);
+}
+
+
+
+
+
+
